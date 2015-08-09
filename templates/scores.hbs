@@ -1,0 +1,25 @@
+<ul class="scoresList">
+    <li>
+        <span>Your score:</span>
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning" role="progressbar" style="min-width: 20px;width:{{totalScore}}%">
+                {{totalScore}}%
+            </div>
+        </div>
+    </li>
+</ul>
+
+<ul class="scoresList">
+    {{#each topScores}}
+    <li>
+        <span>{{username}}</span>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" style="min-width: 20px;width:{{score}}%">
+                {{score}}%
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+
+<a id="{{topic}}StartOverBtn" class="btn btn-primary startOverBtn" href="#">Start over</a>

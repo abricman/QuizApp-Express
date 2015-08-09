@@ -1,0 +1,103 @@
+doctype html
+html
+    head(lang="en")
+        meta(charset="UTF-8")
+        title Sports quiz
+
+        meta(name="description", content="Sports quiz")
+        meta(name="keywords", content="sport, sports, quiz")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        link(rel='stylesheet', href='./vendor/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='./css/style-quiz.css')
+    body
+        div.container-fluid
+            // Header
+            header
+                div.row
+                    div.col-xs-12.text-center
+                        a(href="/") Sports Quiz
+            // Logout area
+            section
+                div.row
+                    div#account-area.col-xs-12.col-md-offset-8.col-md-4.text-right
+                        span Welcome #{username}!
+                        a#logout-btn.btn.btn-danger(href="/logout") Log out
+
+            // Quizzies
+            main
+                div.row
+                    div#quizzes-container.col-xs-12.col-md-offset-3.col-md-6.col-md-offset-3
+                        ul.nav.nav-tabs
+                            li.active: a(href="#basketball" data-toggle="tab") Basketball
+                            li: a(href="#football" data-toggle="tab") Football
+                            li: a(href="#skiing" data-toggle="tab") Skiing
+                            li: a(href="#mma" data-toggle="tab") MMA
+                        div.tab-content
+                            // Basketball quiz
+                            div#basketball.tab-pane.fade.in.active
+                                div#basketballQuizContainer
+                                    div#basketballQuestionContainer
+                                        p#basketballQuestion.question Failed to retrieve data. Please refresh...
+                                        ul#basketballAnswers
+                                    div#basketballScores.scores
+                                    div#basketballButtonsContainer.buttonsContainer.text-center
+                                        a#basketballPrevBtn.btn.btn-primary Previous
+                                        div.btnDivider
+                                        a#basketballNextBtn.btn.btn-primary(href="#") Next
+                                    div#basketballAlert.alert.alert-danger.text-center You have to answer before you can continue.
+                                // Progress bar
+                                div.progress
+                                    div#basketballProgressBar.progress-bar(role="progressbar")
+                            // Football quiz
+                            div#football.tab-pane.fade.in
+                                div#footballQuizContainer
+                                    div#footballQuestionContainer
+                                        p#footballQuestion.question Failed to retrieve data. Please refresh...
+                                        ul#footballAnswers
+                                    div#footballScores.scores
+                                    div#footballButtonsContainer.buttonsContainer.text-center
+                                        a#footballPrevBtn.btn.btn-primary Previous
+                                        div.btnDivider
+                                        a#footballNextBtn.btn.btn-primary(href="#") Next
+                                    div#footballAlert.alert.alert-danger.text-center You have to answer before you can continue.
+                                // Progress bar
+                                div.progress
+                                    div#footballProgressBar.progress-bar(role="progressbar")
+                            // Skiing quiz
+                            div#skiing.tab-pane.fade.in
+                                div#skiingQuizContainer
+                                    div#skiingQuestionContainer
+                                        p#skiingQuestion.question Failed to retrieve data. Please refresh...
+                                        ul#skiingAnswers
+                                    div#skiingScores.scores
+                                    div#skiingButtonsContainer.buttonsContainer.text-center
+                                        a#skiingPrevBtn.btn.btn-primary Previous
+                                        div.btnDivider
+                                        a#skiingNextBtn.btn.btn-primary(href="#") Next
+                                    div#skiingAlert.alert.alert-danger.text-center You have to answer before you can continue.
+                                // Progress bar
+                                div.progress
+                                    div#skiingProgressBar.progress-bar(role="progressbar")
+                            // MMA quiz
+                            div#mma.tab-pane.fade.in
+                                div#mmaQuizContainer
+                                    div#mmaQuestionContainer
+                                        p#mmaQuestion.question Failed to retrieve data. Please refresh...
+                                        ul#mmaAnswers
+                                    div#mmaScores.scores
+                                    div#mmaButtonsContainer.buttonsContainer.text-center
+                                        a#mmaPrevBtn.btn.btn-primary Previous
+                                        div.btnDivider
+                                        a#mmaNextBtn.btn.btn-primary(href="#") Next
+                                    div#mmaAlert.alert.alert-danger.text-center You have to answer before you can continue.
+                                // Progress bar
+                                div.progress
+                                    div#mmaProgressBar.progress-bar(role="progressbar")
+
+        script(src="./vendor/jquery/js/jquery.js")
+        script(src="./vendor/bootstrap/js/bootstrap.js")
+        script(src="./vendor/handlebars/handlebars.js")
+        script(src="./js/templates.js")
+        script(src="./js/quizApplication.js")
+        script(src="./js/script-quiz.js")

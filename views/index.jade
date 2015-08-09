@@ -1,0 +1,29 @@
+doctype html
+html
+    head(lang="en")
+        meta(charset="UTF-8")
+        title Let's play!
+
+        meta(name="description", content="Sport quiz application entry page")
+        meta(name="keywords", content="javascript, quiz")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        link(rel='stylesheet', href='./vendor/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='./css/style-index.css')
+    body
+        div.container-fluid
+            // Header
+            header
+                div.row
+                    div.col-xs-12.text-center
+                        a(href="/") Sports Quiz
+
+            // Buttons
+            div.row
+                div.col-xs-12.text-center.vert-center-buttons
+                    if isAuthenticated
+                        a#startBtn.btn-lg.btn-danger(href="/quiz") Start
+                    else
+                        a#registerLoginBtn.btn.btn-primary(href="/registerLogin") Register / Log in
+
+        script(src="./vendor/jquery/js/jquery.js")

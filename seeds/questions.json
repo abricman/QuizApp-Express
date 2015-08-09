@@ -1,0 +1,46 @@
+[
+  {"question":"Which skier had the reputation of always finishing behind Hermann Maier?",
+    "choices":["Lasse Kjus","Stephan Eberharter","Kjetil Andre Aamodt","Benjamin Raich"],
+    "answer":1,
+    "topic":"skiing"},
+
+  {"question":"In which discipline was Tina Maze tied for 1st place at the 2014 winter olympic games?",
+    "choices":["Downhill","Slalom","Super combined","Giant slalom"],
+    "answer":0,
+    "topic":"skiing"},
+
+  {"question":"Which fighter has the most wins in UFC bouts?",
+    "choices":["Randy Couture","Anderson Silva","Chuck Lidell","Georges St. Pierre"],
+    "answer":3,
+    "topic":"mma"},
+
+  {"question":"How many losses has Georges St. Pierre suffered in his UFC career?",
+    "choices":["1","3","2","0"],
+    "answer":2,
+    "topic":"mma"},
+
+  {"question":"For how many seasons has Sir Alex Ferguson been the manager of Manchester United?",
+    "choices":["20","23","27","29"],
+    "answer":2,
+    "topic":"football"},
+
+  {"question":"Who is the german Bundesliga all time record holder with 365 goals scored?",
+    "choices":["Jurgen Klinsmann","Gerd Muller","Jupp Heynckes","Karl-Heinz Rummenigge"],
+    "answer":1,
+    "topic":"football"},
+
+  {"question":"Which was Lionel Messi's boyhood club in Argentina?",
+    "choices":["Boca Juniors","River Plate","Hurracan","Newell's Old Boys"],
+    "answer":3,
+    "topic":"football"},
+
+  {"question":"Who is the all time NBA leader in total points scored? ",
+    "choices":["Kareem Abdul-Jabar","Karl Malone","Michael Jordan","Charles Barkley"],
+    "answer":0,
+    "topic":"basketball"},
+
+  {"question":"Who won 2 NBA titles as player and coach?",
+    "choices":["Lenny Wilkens","Bill Russel","Jason Kidd","Karl Malone"],
+    "answer":1,
+    "topic":"basketball"}
+]

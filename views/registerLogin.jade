@@ -1,0 +1,61 @@
+doctype html
+html
+    head(lang="en")
+        meta(charset="UTF-8")
+        title Register or login
+
+        meta(name="description", content="Register or login to Sport quiz application")
+        meta(name="keywords", content="sports, quiz, register, log in")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        link(rel='stylesheet', href='./vendor/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='./css/style-registerLogin.css')
+    body
+        div.container-fluid.text-center
+            // Header
+            header
+                div.row
+                    div.col-xs-12.text-center
+                        a(href="/") Sports Quiz
+
+            // Forms
+            main
+                div.row#forms
+                    section
+                        // Login form
+                        form#loginForm.col-md-offset-2.col-md-4(action="/login", method="post", role="form")
+                            input(type="hidden", name="_csrf", value="#{csrfToken}")
+                            div.form-group
+                                input#loginUsername.form-control.input-lg(name="loginUsername", type="text", placeholder="user name")
+                            div.form-group
+                                input#loginPassword.form-control.input-lg(name="loginPassword", type="password", placeholder="password")
+                            div.form-group
+                                button#loginSubmit.btn-lg.btn-primary(name="loginSubmit", type="submit") Log in
+
+                            if loginErrors
+                                each err, index in loginErrors
+                                    div.alert.alert-danger= err
+
+                    section
+                        // Register form
+                        form(action="/register", method="post", role="form").col-md-4#regForm
+                            input(type="hidden", name="_csrf", value="#{csrfToken}")
+                            div.form-group
+                                input#regEmail.form-control.input-lg(name="regEmail", type="email", placeholder="someone@example.com")
+                            div.form-group
+                                input#regUsername.form-control.input-lg(name="regUsername", type="text", placeholder="user name")
+                            div.form-group
+                                input#regPassword.form-control.input-lg(name="regPassword", type="password", placeholder="password")
+                            div.form-group
+                                input#confirmRegPassword.form-control.input-lg(name="confirmRegPassword", type="password", placeholder="confirm password")
+                            div.form-group
+                                button#regSubmit.btn-lg.btn-primary(name="regSubmit", type="submit") Register
+
+                            if regErrors
+                                each err, index in regErrors
+                                    div.alert.alert-danger= err
+
+        script(src="./vendor/jquery/js/jquery.js")
+        script(src="./vendor/bootstrap/js/bootstrap.js")
+        script(src="./vendor/jquery-validation/jquery.validate.js")
+        script(src="./js/script-registerLogin.js")

@@ -1,0 +1,6 @@
+{
+	"undefined": "localhost:27017/quizExpress",
+	"development": "localhost:27017/quizExpress",
+	"production": "localhost:27017/quizExpress",
+    "test": "localhost:27017/quizExpress"
+}

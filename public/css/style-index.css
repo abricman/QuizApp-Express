@@ -1,0 +1,111 @@
+/*******************************************************************
+*   Base styles
+*******************************************************************/
+
+body {
+    background : linear-gradient(90deg, #59488b 0%, #55477f 50%, #59488b 100%);
+    background : #59488b;
+}
+
+header a {
+    width       : 50%;
+    font-size   : 3em;
+    color       : #433669;
+    text-shadow : 2px 2px 4px #66cdff;
+    font-family : droid_sansregular, sans-serif;
+    cursor      : default;
+}
+
+header a:hover {
+    text-decoration : none;
+}
+
+.vert-center-buttons {
+    margin-top : 20%;
+}
+
+/*******************************************************************
+*   Bootstrap overrides
+*******************************************************************/
+
+.btn-lg {
+    border        : none;
+    border-radius : 2px;
+}
+
+/*******************************************************************
+*   Animations
+*******************************************************************/
+
+@-webkit-keyframes header-animation {
+    0% {
+        text-shadow : 2px 2px 4px #66cdff;
+    }
+    50% {
+        text-shadow       : 2px 2px 2px white;
+        -webkit-transform : scale(0.8);
+        -ms-transform     : scale(0.8);
+        transform         : scale(0.8);
+    }
+    100% {
+        text-shadow : 2px 2px 4px #66cdff;
+    }
+}
+
+@-moz-keyframes header-animation {
+    0% {
+        text-shadow : 2px 2px 4px #66cdff;
+    }
+    50% {
+        text-shadow       : 2px 2px 2px white;
+        -webkit-transform : scale(0.8);
+        -ms-transform     : scale(0.8);
+        transform         : scale(0.8);
+    }
+    100% {
+        text-shadow : 2px 2px 4px #66cdff;
+    }
+}
+
+@keyframes header-animation {
+    0% {
+        text-shadow : 2px 2px 4px #66cdff;
+    }
+    50% {
+        text-shadow       : 2px 2px 2px white;
+        -webkit-transform : scale(0.8);
+        -ms-transform     : scale(0.8);
+        transform         : scale(0.8);
+    }
+    100% {
+        text-shadow : 2px 2px 4px #66cdff;
+    }
+}
+
+/*******************************************************************
+*   Fonts
+*******************************************************************/
+
+@font-face {
+    font-family : 'droid_sansregular';
+    src         : url('../fonts/DroidSans-Bold-webfont.eot');
+    src         : url('../fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DroidSans-Bold-webfont.woff') format('woff'),
+    url('../fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+    url('../fonts/DroidSans-Bold-webfont.svg#droid_sansregular') format('svg');
+    font-weight : normal;
+    font-style  : normal;
+}
+
+/*******************************************************************
+*   Media queries
+*******************************************************************/
+
+@media (min-width : 970px) {
+    header a:hover {
+        color             : #433669;
+        text-shadow       : 2px 2px 4px #66cdff;
+        -webkit-animation : header-animation 1s infinite ease-out;
+        animation         : header-animation 1s infinite ease-out;
+    }
+}

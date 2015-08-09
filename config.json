@@ -1,0 +1,13 @@
+{
+  "development" : {
+    "mongoURI" : "mongodb://localhost:27017/quizExpress"
+  },
+
+  "test": {
+    "mongoURI" : "mongodb://localhost:27017/quizExpressTest"
+  },
+
+  "undefined" : {
+    "mongoURI" : "mongodb://localhost:27017/quizExpress"
+  }
+}

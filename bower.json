@@ -1,0 +1,30 @@
+{
+  "name": "QuizApplication-Express",
+  "version": "0.0.0",
+  "homepage": "https://github.com/abricman/QuizApplication-Express",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1",
+    "bootstrap": "~3.3.5",
+    "handlebars": "~3.0.3",
+    "jquery-validation": "~1.13.1"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "js": "dist/js/bootstrap.js",
+      "fonts": "dist/fonts/*.*",
+      "css": "dist/css/bootstrap.css"
+    },
+    "jquery": {
+      "js": "jquery.js"
+    }
+  }
+}
